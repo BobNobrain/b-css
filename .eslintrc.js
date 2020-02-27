@@ -6,6 +6,9 @@ module.exports = {
         "plugin:@typescript-eslint/recommended-requiring-type-checking"
     ],
     parser: '@typescript-eslint/parser',
+    parserOptions: {
+        project: './tsconfig.json',
+    },
     plugins: [
         '@typescript-eslint'
     ],
@@ -37,6 +40,7 @@ module.exports = {
                 ts: 'never',
             }
         ],
+        'import/prefer-default-export': 'off',
         'indent': ['error', 4],
         'lines-between-class-members': 'off',
         'max-len': ['error', 120],
