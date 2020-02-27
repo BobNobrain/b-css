@@ -1,0 +1,44 @@
+{
+  "name": "tbem",
+  "version": "0.1.0",
+  "description": "BEM-oriented styles compiled into CSS and TypeScript",
+  "main": "dist/index.js",
+  "directories": {
+    "doc": "docs",
+    "example": "examples",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/BobNobrain/tbem.git"
+  },
+  "keywords": [
+    "BEM",
+    "CSS",
+    "TypeScript",
+    "CSS preprocessor",
+    "language",
+    "parser"
+  ],
+  "author": "BobNobrain",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BobNobrain/tbem/issues"
+  },
+  "homepage": "https://github.com/BobNobrain/tbem#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.21.0",
+    "@typescript-eslint/parser": "^2.21.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "jest": "^25.1.0",
+    "typescript": "^3.8.2"
+  }
+}
