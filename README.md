@@ -2,6 +2,8 @@
 
 > A simplier way for writing BEM-oriented CSS
 
+[Documentation](docs/index.md) (will appear there in some time)
+
 ## Examples
 
 ```
