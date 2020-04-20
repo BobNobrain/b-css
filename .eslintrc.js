@@ -43,6 +43,7 @@ module.exports = {
             SwitchCase: 1,
         }],
         'lines-between-class-members': 'off',
+        'max-classes-per-file': 'off',
         'max-len': ['error', 120],
         'no-continue': 'off',
         'no-mixed-operators': 'off',

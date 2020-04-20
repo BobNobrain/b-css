@@ -1,5 +1,5 @@
 import { ParsingContext } from '../types';
-import ParseError from '../ParseError';
+import { SyntaxParseError } from '../ParseError';
 
 
 const CODE_A_LOWER = 'a'.charCodeAt(0);

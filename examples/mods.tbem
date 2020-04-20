@@ -1,0 +1,42 @@
+block todoList
+
+    // either
+    el item
+        mod state
+            'done'
+                text-decoration strikeout
+
+            'wip'
+                color green
+
+            'todo' | unset;
+
+    // or
+    el item
+        mod state?: 'done' | 'wip' | 'todo';
+
+        if state='done'
+            text-decoration strikeout
+
+        if state='wip'
+            color green
+
+    // or
+    el item(state)
+        if state='done'
+            text-decoration strikeout
+
+        if state='wip'
+            color green
+
+        if state='todo' or state=unset;
+
+    // or
+    el item(state?: 'done' | 'wip' | 'todo')
+        if state='done'
+            text-decoration strikeout
+
+        if state='wip'
+            color green
+
+        if state='todo' or state=unset;

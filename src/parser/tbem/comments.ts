@@ -1,10 +1,13 @@
 import { ParsingContext, AstNode } from '../types';
-import whitespace from '../atoms/whitespace';
-import ParseError from '../ParseError';
+import whitespace, { OPTIONAL } from '../atoms/whitespace';
+import { SyntaxParseError } from '../ParseError';
 
 export interface CommentNode extends AstNode {
     multiline: boolean;
     content: string;
+}
+export interface AstNodeWithComments extends AstNode {
+    comments: CommentNode[];
 }
 
 const SINGLE_COMMENT_START = '//';
@@ -95,16 +98,16 @@ export default function commentsOrWhitespace(ctx: ParsingContext, required: bool
 
             default:
                 if (required && !result.length) {
-                    throw new ParseError(ctx, 'whitespace or comments');
+                    throw new SyntaxParseError(ctx, 'whitespace or comments');
                 }
                 return result;
         }
 
-        whitespace(ctx, false);
+        whitespace(ctx, OPTIONAL);
     }
 
     if (required && !result.length) {
-        throw new ParseError(ctx, 'whitespace or comments');
+        throw new SyntaxParseError(ctx, 'whitespace or comments');
     }
     return result;
 }
